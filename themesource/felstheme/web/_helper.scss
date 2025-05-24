@@ -1,0 +1,101 @@
+@import '../../../theme/web/custom-variables';
+
+/*--- Hover ---*/
+.hover-pointer:hover{
+    cursor: pointer;
+}
+
+/*--- Width ---*/
+.w-fit{
+    width: fit-content;
+}
+
+/*--- Border Radius ---*/
+
+.border-radius-default{
+    border-radius: $border-radius-default;
+}
+
+.border-radius-12{
+    border-radius: $border-radius-12;
+}
+
+.border-radius-full{
+    border-radius: 9999px;
+}
+
+/*--- Filter Selector ---*/
+
+.filter-selector{
+    button{
+        background-color: var(--gray-primary);
+        color: black;
+    }
+}
+
+.li-row{
+    >ul{
+        display: flex;
+        flex-direction: row;
+        >li{
+
+        }
+    }
+}
+
+.li-sb{
+    >ul{
+        justify-content: space-between;
+    }
+}
+
+.text-black-50{
+    color: #00000080;
+}
+
+/*--- shadow ---*/
+.input-shadow-large{
+    input{
+        box-shadow: 0 2px 12px #00000012;
+    }   
+}
+
+.cb-shadow-large{
+    .widget-combobox-input-container.form-control{
+        box-shadow: 0 2px 12px #00000012;
+    }   
+}
+
+.shadow-large {
+    box-shadow: 0 2px 12px #00000012;
+    margin-bottom: 0px;
+    border-width: 0px !important;
+    border-style: solid;
+    border-color: rgba(206, 208, 211, 0.5);
+}
+
+/*--- Dataview ---*/
+.mx-dataview-w100{
+    .mx-dataview{
+        width: 100%;
+        .mx-dataview-content{
+            width: 100%;
+        }
+    }
+}
+
+.mx-dataview-w100.mx-dataview{
+    width: 100%;
+    .mx-dataview-content{
+        width: 100%;
+    }
+}
+
+/* Space */
+.whitespace-nowrap{
+    white-space: nowrap;
+}
+
+.text-align-right{
+    text-align: right !important;
+}

@@ -1,0 +1,107 @@
+@import '../../../theme/web/custom-variables';
+
+.btn-spot-icon{
+    border: unset;
+    border-radius: $border-radius-12;
+    display: flex;
+    align-items: center;
+    span.mx-icon-lined{
+        font-size: 22px;
+    }
+}
+
+@mixin button-variant($color, $background, $border, $hover) {
+    @if not $exclude-button {
+        color: $color;
+        border-color: $border;
+        background-color: $background;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle {
+            color: $color;
+            border-color: $hover;
+            background-color: $hover;
+        }
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle {
+            background-image: none;
+        }
+        &.disabled,
+        &[disabled],
+        &[aria-disabled],
+        fieldset[disabled] {
+            &,
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                border-color: $border;
+                background-color: $background;
+            }
+        }
+        // Button bordered
+        &.btn-bordered {
+            background-color: transparent;
+            @if $color != $btn-default-color { //Alle außer Default
+                color: $border;
+            }
+            
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            .open > &.dropdown-toggle {
+                color: $border;
+                border-color: $border;
+                background-color: rgba($border,0.1);
+            }
+        }
+        // Button as link
+        &.btn-link {
+            text-decoration: none;
+            border-color: transparent;
+            background-color: transparent;
+            @if $color != $btn-default-color {
+                color: $background;
+            }
+
+            &:hover {
+                border-color: $btn-link-bg-hover;
+                background-color: $btn-link-bg-hover;
+            }
+        }
+    }
+}
+
+.btn-default{
+        &.btn-bordered {
+        background-color: transparent;
+        border-color: $btn-default-color;
+        
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle {
+            color: $btn-default-color;
+            border-color: $btn-default-color;
+            background-color: rgba($btn-default-color,0.1);
+        }
+    } 
+}
+
+.nav-button{
+    font-size: 3rem;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-12;
+    margin-bottom: 4px;
+}

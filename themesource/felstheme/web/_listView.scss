@@ -1,0 +1,126 @@
+@import '../../../theme/web/custom-variables';
+
+.listview-lined{
+    >ul{
+        background-color: white;
+        border-radius: $border-radius-12;
+        overflow: hidden;
+        margin: 0px !important;
+        box-shadow: 0 2px 12px #00000012;
+        >li{
+            border-top: 0px !important;
+            border-bottom: 1px solid #ededed;
+            padding: 2rem 2rem;
+            &:last-child{
+                border-bottom: 0px !important;
+            }
+            &:hover{
+                background-color: #f6f9ff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.listview-bordered{
+    >ul{
+        >li{
+            border-radius: $border-radius-12;
+            box-shadow: 0 2px 12px #00000012;
+            padding: 2rem 2rem;
+            border: 0px !important;
+            margin-bottom: $spacing-medium;
+            &:hover{
+                background-color: #f6f9ff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.LeistungList-pdf-format{
+    >ul{
+        list-style: none;
+        counter-reset: list-counter;
+        overflow: hidden;
+        margin: 0px !important;
+        >li{
+            counter-increment: list-counter;
+            display: flex;
+            align-items: start;
+            
+            &:before{
+                content: counter(list-counter) ". ";
+                margin-right: 5px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+.LeistungList-pdf{
+    >ul{
+        list-style: none;
+        counter-reset: list-counter;
+        background-color: white;
+        border-radius: $border-radius-12;
+        overflow: hidden;
+        margin: 0px !important;
+        box-shadow: 0 2px 12px #00000012;
+        >li{
+            background-color: white;
+            counter-increment: list-counter;
+            display: flex;
+            align-items: start;
+            border-top: 0px !important;
+            border-bottom: 1px solid #ededed;
+            padding: 2rem 3rem !important;
+
+            &:last-child{
+                border-bottom: 0px !important;
+            }
+
+            &:hover{
+                background-color: #f6f9ff;
+                cursor: pointer;
+            }
+
+            &:before{
+                content: counter(list-counter) ". ";
+                margin-right: 5px;
+                flex-shrink: 0;
+            }
+
+            & + li{
+                border-top: none !important;
+            }
+        }
+    }
+}
+
+.data-grid-v2{
+    &.table-hover .tr:hover > .td {
+        background-color: #f6f9ff;
+    }
+}
+
+
+.NoItemList{
+    li.mx-listview-empty{
+        display: none;
+    }
+}
+
+.TaetigkeitenListe {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.TaetigkeitenListe span::after {
+  content: " |"; /* Fügt das Trennzeichen hinzu */
+}
+
+.TaetigkeitenListe span:last-child::after {
+  content: ""; /* Entfernt das Trennzeichen beim letzten Span */
+}

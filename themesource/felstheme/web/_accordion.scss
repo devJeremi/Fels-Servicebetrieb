@@ -1,0 +1,37 @@
+@import '../../../theme/web/custom-variables';
+
+.accordion-v2{
+    .widget-accordion-group{
+        border-bottom: 0px;
+        border-radius: 12px !important;
+        box-shadow: 0 2px 12px #00000012;
+    }
+
+    .widget-accordion-group.widget-accordion-group-collapsed{
+        .widget-accordion-group-header-button{
+            background-color: white !important;
+        }
+    }
+
+    .widget-accordion-group{
+        .widget-accordion-group-header-button{
+            background-color: #f6f9ff !important;
+        }
+    }
+
+    .widget-accordion-group-header-button{
+        border-radius: $border-radius-12 !important;
+    }
+}
+
+.accordion-v2.widget-accordion .widget-accordion-group > .widget-accordion-group-header > .widget-accordion-group-header-button.widget-accordion-group-header-button-clickable:hover{
+    background-color: #f6f9ff !important;
+}
+
+.accordion-v2.widget-accordion .widget-accordion-group > .widget-accordion-group-header > .widget-accordion-group-header-button.widget-accordion-group-header-button-clickable:active{
+    background-color: #f6f9ff !important;
+}
+
+.accordion-v2.widget-accordion .widget-accordion-group > .widget-accordion-group-header > .widget-accordion-group-header-button.widget-accordion-group-header-button-clickable:focus{
+    background-color: #f6f9ff !important;
+}
